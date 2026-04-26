@@ -1,0 +1,20 @@
+<div class="anime-card">
+    @if (anime) {
+        <img
+                [src]="anime.image"
+                alt="Anime 1"
+                class="anime-image"
+        />
+        <div class="anime-content">
+            <a class="anime-title" [routerLink]="['/anime/', anime.id]">{{ anime.title }}</a>
+            <p class="anime-genre">Жанр: Экшен, Драма</p>
+            <div class="gap"></div>
+            <div class="anime-footer">
+                <span class="anime-rating">⭐ 9.1</span>
+                <button (click)="selectAnime(anime)" class="anime-btn">Подробнее</button>
+            </div>
+        </div>
+    }
+
+
+</div>

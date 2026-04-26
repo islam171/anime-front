@@ -1,0 +1,12 @@
+<div class="anime-grid">
+
+    @if (anime$ | async; as animes) {
+        @for (anime of animes; track $index) {
+            <app-cart-item [anime]="anime" (selectedAnime)="selectAnime($event)"/>
+        }
+    }@else{
+        <div>
+            Loading...
+        </div>
+    }
+</div>
