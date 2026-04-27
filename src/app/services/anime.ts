@@ -8,7 +8,7 @@ import {IAnime, IAnimeResponse} from "../models/anime";
 })
 export class AnimeService {
     private readonly http = inject(HttpClient);
-    private readonly baseURL = "https://kabden.dev/api"
+    private readonly baseURL = "https://anime-back-hw6ux.ondigitalocean.app/api"
 
     private readonly animeSubject = new BehaviorSubject<IAnime[]>([])
     anime$ = this.animeSubject.asObservable();
